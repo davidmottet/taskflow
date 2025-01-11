@@ -3,13 +3,9 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static const Color black = Color(0xFF1f1f1f);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color lightGreen = Color(0xFFc6e5ae);
-  static const Color lightOrange = Color(0xFFfadd72);
-  static const Color lightBlue = Color(0xFFaed8e5);
-  static const Color darkText = Color(0xFF0C0C0D);
 
-  static const Color background = Color(0xFF1f1f1f);
-  static const Color text = Color(0xFFFFFFFF);
+  static const Color background = black;
+  static const Color text = white;
   static const Color iconBackground = Color(0xFF363636);
 
   static ThemeData get lightTheme {
@@ -32,7 +28,7 @@ class AppTheme {
       // Boutons
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: darkText,
+          backgroundColor: background,
           foregroundColor: text,
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 25.0),
           shape: RoundedRectangleBorder(
@@ -68,7 +64,12 @@ class AppTheme {
 }
 
 extension CustomColors on ThemeData {
-  Color get customLightGreen => AppTheme.lightGreen;
-  Color get customLightOrange => AppTheme.lightOrange;
+  Color get customViolet => const Color(0xFF673DEA);
+  Color get customGreen => const Color(0xFFCBD87D);
+  Color get customOrange => const Color(0xFFF9CD63);
+  Color get customRed => const Color(0xFFF9CD63);
+  Color get customBlue => const Color(0xFFF9CD63);
+  Color get customTeal => const Color(0xFF5CC397);
+  Color get customMint => const Color(0xFF5CC397);
   Color get customIconBackground => Color(0xFF363636);
 }
