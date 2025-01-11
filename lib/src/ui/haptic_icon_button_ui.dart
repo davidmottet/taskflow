@@ -14,6 +14,7 @@ class HapticIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
+      radius: 25.0,
       backgroundColor: Theme.of(context).secondaryHeaderColor,
       child: IconButton(
         icon: icon,
