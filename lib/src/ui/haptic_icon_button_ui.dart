@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:taskflow/src/config/theme.dart';
 
 class HapticIconButton extends StatelessWidget {
   final Icon icon;
@@ -15,7 +16,7 @@ class HapticIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: 25.0,
-      backgroundColor: Theme.of(context).secondaryHeaderColor,
+      backgroundColor: Theme.of(context).customIconBackground,
       child: IconButton(
         icon: icon,
         onPressed: () {
@@ -23,9 +24,8 @@ class HapticIconButton extends StatelessWidget {
           onPressed();
         },
         iconSize: 35.0,
-        color: Theme.of(context).primaryColor,
         constraints: const BoxConstraints(),
-        splashRadius: 24.0,
+        splashRadius: 30.0,
       ),
     );
   }
