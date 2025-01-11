@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taskflow/src/ui/app_bar_ui.dart';
+import 'package:taskflow/src/ui/card_title_ui.dart';
 import 'package:taskflow/src/ui/haptic_icon_button_ui.dart';
 import 'package:taskflow/src/ui/search_ui.dart';
 
@@ -37,6 +38,96 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ],
+            ),
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Column(
+                  children: [
+                    // Première ligne : Tasks à gauche, Notes à droite
+                    Expanded(
+                      flex: 2,
+                      child: Row(
+                        children: [
+                          // Bloc gauche : Tasks
+                          Expanded(
+                            flex: 1,
+                            child: Column(
+                              children: [
+                                Expanded(
+                                  child: CardTile(
+                                    color: Colors.black,
+                                    title: "Task",
+                                    subtitle: "subtitle",
+                                  ),
+                                ),
+                                Expanded(
+                                  child: CardTile(
+                                    color: Colors.black,
+                                    title: "Task",
+                                    subtitle: "subtitle",
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          // Bloc droit : Notes + icônes
+                          Expanded(
+                            flex: 1,
+                            child: Column(
+                              children: [
+                                // Partie Notes
+                                Expanded(
+                                  flex: 2,
+                                  child: CardTile(
+                                    color: Colors.black,
+                                    title: "Task",
+                                    subtitle: "subtitle",
+                                  ),
+                                ),
+                                // Partie icônes
+                                Expanded(
+                                  flex: 1,
+                                  child: Row(
+                                    children: [
+                                      // Icône mail
+                                      Expanded(
+                                        child: CardTile(
+                                          color: Colors.black,
+                                          title: "Task",
+                                          subtitle: "subtitle",
+                                        ),
+                                      ),
+                                      // Icône caméra
+                                      Expanded(
+                                        child: CardTile(
+                                          color: Colors.black,
+                                          title: "Task",
+                                          subtitle: "subtitle",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // Deuxième ligne : Reminder
+                    Expanded(
+                      flex: 1,
+                      child: CardTile(
+                        color: Colors.black,
+                        title: "Task",
+                        subtitle: "subtitle",
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),
