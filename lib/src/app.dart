@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:taskflow/src/home/home_screen.dart';
-import 'package:taskflow/src/note_list/note_list_screen.dart';
-import 'package:taskflow/src/task_list/task_list_screen.dart';
 
-import 'settings/settings_controller.dart';
-import 'settings/settings_view.dart';
+import 'package:taskflow/src/home_feature/home_screen.dart';
+import 'package:taskflow/src/note_list_feature/note_list_screen.dart';
+import 'package:taskflow/src/task_list_feature/task_list_screen.dart';
+import 'package:taskflow/src/settings_feature/settings_controller.dart';
+import 'package:taskflow/src/settings_feature/settings_view.dart';
 
 /// The Widget that configures your application.
 class MyApp extends StatelessWidget {
