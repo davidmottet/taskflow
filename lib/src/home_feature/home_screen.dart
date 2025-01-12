@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:taskflow/src/config/theme.dart';
+import 'package:taskflow/src/note_list_feature/note_list_screen.dart';
+import 'package:taskflow/src/task_list_feature/task_list_screen.dart';
 import 'package:taskflow/src/ui/app_bar_ui.dart';
+import 'package:taskflow/src/ui/card_icon_ui.dart';
 import 'package:taskflow/src/ui/card_title_ui.dart';
 import 'package:taskflow/src/ui/haptic_icon_button_ui.dart';
 import 'package:taskflow/src/ui/search_ui.dart';
@@ -61,6 +64,7 @@ class HomeScreen extends StatelessWidget {
                                   child: CardTile(
                                     color: Theme.of(context).customOrange,
                                     title: "Task",
+                                    routeName: TaskListScreen.routeName,
                                   ),
                                 ),
                                 Expanded(
@@ -84,8 +88,9 @@ class HomeScreen extends StatelessWidget {
                                   flex: 2,
                                   child: CardTile(
                                     color: Theme.of(context).customMint,
-                                    title: "Task",
+                                    title: "Notes",
                                     subtitle: "subtitle",
+                                    routeName: NoteListScreen.routeName,
                                   ),
                                 ),
                                 // Partie icônes
@@ -95,18 +100,16 @@ class HomeScreen extends StatelessWidget {
                                     children: [
                                       // Icône mail
                                       Expanded(
-                                        child: CardTile(
-                                          color: Theme.of(context).customRed,
-                                          title: "Task",
-                                          subtitle: "subtitle",
+                                        child: CardIcon(
+                                          backgroundColor: Theme.of(context).customRed,
+                                          icon: Icons.message,
                                         ),
                                       ),
                                       // Icône caméra
                                       Expanded(
-                                        child: CardTile(
-                                          color: Theme.of(context).customGreen,
-                                          title: "Task",
-                                          subtitle: "subtitle",
+                                        child: CardIcon(
+                                          backgroundColor: Theme.of(context).customGreen,
+                                          icon: Icons.phone,
                                         ),
                                       ),
                                     ],
