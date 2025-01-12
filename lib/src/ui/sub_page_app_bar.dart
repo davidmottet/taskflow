@@ -13,33 +13,41 @@ class SubPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
-
+  Size get preferredSize => Size.fromHeight(kToolbarHeight * 2);
+  
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      leading: IconButton(
-        icon: Icon(Icons.chevron_left, size: 45),
-        onPressed: () {
-          HapticFeedback.lightImpact();
-          Navigator.of(context).pop();
-        },
-      ),
-      title: Text(
-        pageTitle,
-        style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
-      ),
-      actions: [
-        HapticIconButton(
-          icon: const Icon(Icons.add, color: Colors.white, size: 20.0),
-          onPressed: () {
-          },
-        ),
-        const SizedBox(width: 4),
-        HapticIconButton(
-          icon: const Icon(Icons.settings, color: Colors.white, size: 20.0),
-          onPressed: () {
-          },
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(height: 16),
+        Flexible(
+          child: AppBar(
+            leading: IconButton(
+              icon: Icon(Icons.chevron_left, size: 45),
+              onPressed: () {
+                HapticFeedback.lightImpact();
+                Navigator.of(context).pop();
+              },
+            ),
+            title: Text(
+              pageTitle,
+              style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+            ),
+            actions: [
+              HapticIconButton(
+                icon: const Icon(Icons.add, color: Colors.white, size: 20.0),
+                onPressed: onPlusIconPressed,
+              ),
+              const SizedBox(width: 4),
+              HapticIconButton(
+                icon: const Icon(Icons.settings, color: Colors.white, size: 20.0),
+                onPressed: () {
+                  // Action pour le bouton paramètres
+                },
+              ),
+            ],
+          ),
         ),
       ],
     );
