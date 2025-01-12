@@ -24,7 +24,10 @@ class HapticIconButton extends StatelessWidget {
           onPressed();
         },
         iconSize: 35.0,
-        constraints: const BoxConstraints(),
+        constraints: BoxConstraints(
+          minWidth: 50.0,
+          minHeight: 50.0,
+        ),
         splashRadius: 30.0,
       ),
     );
