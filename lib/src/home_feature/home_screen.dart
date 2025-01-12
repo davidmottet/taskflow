@@ -56,13 +56,14 @@ class HomeScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 Expanded(
+                                  flex: 1,
                                   child: CardTile(
                                     color: Colors.black,
                                     title: "Task",
-                                    subtitle: "subtitle",
                                   ),
                                 ),
                                 Expanded(
+                                  flex: 4,
                                   child: CardTile(
                                     color: Colors.black,
                                     title: "Task",

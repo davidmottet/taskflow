@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 class CardTile extends StatelessWidget {
   final Color color;
   final String title;
-  final String subtitle;
+  final String? subtitle;
   final String? time;
   final bool hasImage;
   final bool hasIcons;
   final bool isLargeText;
 
   const CardTile({
+    super.key,
     required this.color,
     required this.title,
-    required this.subtitle,
+    this.subtitle,
     this.time,
     this.hasImage = false,
     this.hasIcons = false,
@@ -21,12 +22,12 @@ class CardTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Card(
         color: color,
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -34,11 +35,13 @@ class CardTile extends StatelessWidget {
                 title,
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 8),
-              Text(
-                subtitle,
-                style: TextStyle(fontSize: isLargeText ? 16 : 14),
-              ),
+              if (subtitle != null) ...[
+                SizedBox(height: 8),
+                Text(
+                  subtitle!,
+                  style: TextStyle(fontSize: isLargeText ? 16 : 14),
+                ),
+              ],
               if (time != null) ...[
                 SizedBox(height: 8),
                 Text(
