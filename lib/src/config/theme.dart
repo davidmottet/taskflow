@@ -65,11 +65,11 @@ class AppTheme {
 
 extension CustomColors on ThemeData {
   Color get customViolet => const Color(0xFF673DEA);
-  Color get customGreen => const Color(0xFFCBD87D);
+  Color get customGreen => const Color(0xFF5cc397);
   Color get customOrange => const Color(0xFFF9CD63);
-  Color get customRed => const Color(0xFFF9CD63);
+  Color get customRed => const Color(0xFFde4702);
   Color get customBlue => const Color(0xFFF9CD63);
   Color get customTeal => const Color(0xFF5CC397);
-  Color get customMint => const Color(0xFF5CC397);
+  Color get customMint => const Color(0xFFcade7e);
   Color get customIconBackground => Color(0xFF363636);
 }

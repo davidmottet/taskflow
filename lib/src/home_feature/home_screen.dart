@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskflow/src/config/theme.dart';
 import 'package:taskflow/src/ui/app_bar_ui.dart';
 import 'package:taskflow/src/ui/card_title_ui.dart';
 import 'package:taskflow/src/ui/haptic_icon_button_ui.dart';
@@ -58,14 +59,14 @@ class HomeScreen extends StatelessWidget {
                                 Expanded(
                                   flex: 1,
                                   child: CardTile(
-                                    color: Colors.black,
+                                    color: Theme.of(context).customOrange,
                                     title: "Task",
                                   ),
                                 ),
                                 Expanded(
                                   flex: 4,
                                   child: CardTile(
-                                    color: Colors.black,
+                                    color: Theme.of(context).customOrange,
                                     title: "Task",
                                     subtitle: "subtitle",
                                   ),
@@ -82,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                                 Expanded(
                                   flex: 2,
                                   child: CardTile(
-                                    color: Colors.black,
+                                    color: Theme.of(context).customMint,
                                     title: "Task",
                                     subtitle: "subtitle",
                                   ),
@@ -95,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                                       // Icône mail
                                       Expanded(
                                         child: CardTile(
-                                          color: Colors.black,
+                                          color: Theme.of(context).customRed,
                                           title: "Task",
                                           subtitle: "subtitle",
                                         ),
@@ -103,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                                       // Icône caméra
                                       Expanded(
                                         child: CardTile(
-                                          color: Colors.black,
+                                          color: Theme.of(context).customGreen,
                                           title: "Task",
                                           subtitle: "subtitle",
                                         ),
@@ -121,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: CardTile(
-                        color: Colors.black,
+                        color: Theme.of(context).customViolet,
                         title: "Task",
                         subtitle: "subtitle",
                       ),
