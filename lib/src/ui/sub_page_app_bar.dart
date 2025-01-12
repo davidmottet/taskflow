@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:taskflow/src/ui/haptic_icon_button_ui.dart';
 
 class SubPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String pageTitle;
@@ -18,7 +19,7 @@ class SubPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
-        icon: Icon(Icons.chevron_left),
+        icon: Icon(Icons.chevron_left, size: 45),
         onPressed: () {
           HapticFeedback.lightImpact();
           Navigator.of(context).pop();
@@ -26,15 +27,19 @@ class SubPageAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       title: Text(
         pageTitle,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
       ),
       actions: [
-        IconButton(
-          icon: Icon(Icons.add),
-          onPressed:  () {
-          HapticFeedback.lightImpact();
-          onPlusIconPressed();
-        },
+        HapticIconButton(
+          icon: const Icon(Icons.add, color: Colors.white, size: 20.0),
+          onPressed: () {
+          },
+        ),
+        const SizedBox(width: 4),
+        HapticIconButton(
+          icon: const Icon(Icons.settings, color: Colors.white, size: 20.0),
+          onPressed: () {
+          },
         ),
       ],
     );
