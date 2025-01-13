@@ -1,29 +1,23 @@
 # taskflow
 
-A new Flutter project.
+A Flutter training project.
 
-## Getting Started
+## Introduction
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/to/state-management-sample).
+This project is a starting point for a Flutter application, designed primarily for learning purposes. It is inspired by a mobile app concept called [Task Flow](https://dribbble.com/shots/24963604-Task-Flow-Mobile-App-Concept) that you can view on Dribbble. This concept was created to help efficiently manage daily work priorities.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Objective
 
-## Assets
+The objective of this project is to provide a foundation for exploring and understanding state management principles in Flutter, while drawing inspiration from modern and aesthetic designs. It is not a complete application, but rather an exercise to get familiar with Flutter development.
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
+## AI Assistance
 
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/to/resolution-aware-images).
+This project is fully AI-assisted, meaning that every step of the development is supported by artificial intelligence tools to enhance efficiency and creativity.
 
-## Localization
+## Time Constraint
 
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
+This project was developed over the course of one weekend, during which I did not work on it 100% of the time.
 
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter apps](https://flutter.dev/to/internationalization).
+## Resources
+
+For more information on developing with Flutter, please refer to the online documentation, which offers tutorials, examples, mobile development tips, and a complete API reference.
